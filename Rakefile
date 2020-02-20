@@ -28,6 +28,6 @@ namespace :db do
 end
 
 desc 'drops into the pry console'
-task :console do 
-  Pry.start 
+task :console do
+  Pry.start
 end
