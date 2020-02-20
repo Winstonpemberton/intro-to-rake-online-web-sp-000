@@ -10,12 +10,12 @@ namespace :greeting do
   end
 end
 
-namespace :db do
-  desc 'requires the environment for the migrate task'
-  task :environment do
-    require_relative './config/environment'
-  end
+desc 'requires the environment for the migrate task'
+task :environment do
+  require_relative './config/environment'
+end
 
+namespace :db do
   desc 'seeds the database with dummy data'
   task :seed do
     require_relative './db/seeds.rb'
