@@ -26,3 +26,8 @@ namespace :db do
     Student.create_table
   end
 end
+
+desc 'drops into the pry console'
+task :console do 
+  Pry.start 
+end
