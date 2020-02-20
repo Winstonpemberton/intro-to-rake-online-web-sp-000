@@ -11,6 +11,10 @@ namespace :greeting do
 end
 
 namespace :db do
+  desc 'requires the environment for the migrate task'
+  task :environment do
+    require_relative './config/environment'
+  end
   desc 'migrates changes to your database'
   task :migrate => :environment do
     Student.create_table
