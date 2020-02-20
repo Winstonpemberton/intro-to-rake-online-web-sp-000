@@ -15,6 +15,12 @@ namespace :db do
   task :environment do
     require_relative './config/environment'
   end
+
+  desc 'seeds the database with dummy data'
+  task :seed do
+    require_relative './db/seeds.rb'
+  end
+
   desc 'migrates changes to your database'
   task :migrate => :environment do
     Student.create_table
